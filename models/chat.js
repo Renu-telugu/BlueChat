@@ -19,6 +19,7 @@ const chatSchema = new mongoose.Schema({
     }
 });
 
-const Chat = mongoose.model('Chat', chatSchema);
+// Explicitly set the collection name to match what's in MongoDB Atlas
+const Chat = mongoose.model('Chat', chatSchema, 'chats');
 
 module.exports = Chat;
