@@ -11,12 +11,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/whatsapp';
+const PORT = process.env.PORT || 3000;
+
 main()
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://localhost:27017/whatsapp');
+    await mongoose.connect(MONGODB_URI);
 }
 
 app.get("/chats", async (req, res) => {
@@ -38,7 +41,7 @@ app.post("/chats", (req, res) => {
   });
   newChat
     .save()
-    .then((res) => {
+    .then(() => {
       console.log("Chat saved");
     })
     .catch((err) => {
@@ -76,6 +79,6 @@ app.get('/', (req, res) => {
   res.render("home.ejs");
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
