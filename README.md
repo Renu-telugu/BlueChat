@@ -15,6 +15,19 @@ BlueChat is a lightweight messaging app built with Node.js, Express, MongoDB, an
 - **Database**: MongoDB with Mongoose
 - **Frontend**: EJS, CSS
 
+## Screenshots
+
+<div align="center">
+  <img src="/public/images/ss1.jpg" alt="Home Page" width="500">
+  <p><em>Home Page</em></p>
+  
+  <img src="/public/images/ss2.jpg" alt="Chat List" width="500">
+  <p><em>Chat Messages</em></p>
+  
+  <img src="/public/images/ss3.jpg" alt="New Message" width="500">
+  <p><em>Creating a New Message</em></p>
+</div>
+
 ## Getting Started
 
 1. **Clone the repository**
@@ -54,7 +67,7 @@ bluechat/
 ├── models/            # Database models
 │   └── chat.js        # Chat message schema
 ├── public/            # Static assets
-│   ├── images/        # Images including logo
+│   ├── images/        # Images including logo and screenshots
 │   └── style.css      # CSS styling
 ├── views/             # EJS templates
 │   ├── home.ejs       # Landing page
