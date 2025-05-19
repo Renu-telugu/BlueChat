@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message | BlueChat</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <a href="/chats" style="color: white; text-decoration: none;">
+                <span class="material-icons">arrow_back</span>
+            </a>
+            <h1>New Message</h1>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="form-container">
+            <h3>Create New Message</h3>
+            <form method="POST" action="/chats">
+                <div class="form-group">
+                    <label for="from">Sender:</label>
+                    <input id="from" placeholder="Your name" name="from" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="to">Recipient:</label>
+                    <input id="to" placeholder="Recipient name" name="to" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="msg" placeholder="Type your message here..."></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
