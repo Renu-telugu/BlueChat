@@ -25,9 +25,9 @@ async function connectToDatabase() {
   try {
     // Connection options for better reliability
     const options = {
-      serverSelectionTimeoutMS: 5000,
-      socketTimeoutMS: 45000,
-      family: 4 // Use IPv4, skip trying IPv6
+      serverSelectionTimeoutMS: 60000, 
+      socketTimeoutMS: 60000,
+      family: 4
     };
     
     // Connect to the MongoDB database
