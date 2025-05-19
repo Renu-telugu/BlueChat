@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/whatsapp';
+const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 3000;
 
 // Global variable to store the database connection
