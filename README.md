@@ -1,8 +1,8 @@
 # BlueChat
 
 <div align="center">
-  <img src="/public/images/logo.png" alt="BlueChat Logo" width="80">
-  <h3>A simple, beautiful messaging application</h3>
+  <img src="/public/images/logo.png" alt="BlueChat Logo" width="60">
+  <h4>A simple, beautiful messaging application</h4>
 </div>
 
 ## Overview
